@@ -21,6 +21,8 @@ const links = document.querySelectorAll("li.navbar__item > a");
 
 links.forEach(function (el) {
   el.addEventListener("click", function (e) {
+    e.preventDefault();
+
     //clear class att for each a link
     links.forEach(function (el) {
       if (el.classList.length > 0) {
@@ -34,5 +36,11 @@ links.forEach(function (el) {
     } else {
       el.className = " ";
     }
+    
+    //scroll smooth
+    let scrollToDiv = document.querySelector(this.hash);
+    scrollToDiv.scrollIntoView({
+      behavior: "smooth",
+    });
   });
 });
