@@ -234,3 +234,8 @@ li.navbar__item a:hover {
     color: white;
     background: black;
 }
+
+.active{
+    background-color: black !important;
+    color: white  !important;
+}
